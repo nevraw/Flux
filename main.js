@@ -34,7 +34,7 @@ $("input[name=datemode]").change(function () {
 function loadOptions() {
  if (localStorage.datemode) {
   $datemodeValue = localStorage.datemode;
-  console.log('localStorage.digital: ' + $digitalValue);
+  console.log('localStorage.digital: ' + $datemodeValue);
   // setting radio' value
  } else {
   $datemodeValue = 0;
