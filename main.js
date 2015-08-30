@@ -23,7 +23,6 @@ function buttonHandler() {
  });
 }
 
-// Radio control for inverting colors
 var $dateValue;
 $("input[name=datemode]").change(function () {
  $datemodeValue = parseInt(this.value);
@@ -34,7 +33,7 @@ $("input[name=datemode]").change(function () {
 function loadOptions() {
  if (localStorage.datemode) {
   $datemodeValue = localStorage.datemode;
-  console.log('localStorage.digital: ' + $datemodeValue);
+  console.log('localStorage.datemode: ' + $datemodeValue);
   // setting radio' value
  } else {
   $datemodeValue = 0;
