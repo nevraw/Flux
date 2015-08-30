@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
- <title>Quadrant Settings</title>
+ <title>Flux Settings</title>
  <link rel='stylesheet' type='text/css' href='slate.min.css'>
  <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 <body>
  <div class='item-container'>
-  <h1 class='title'>Quadrant Watchface<br>Configuration Page</h1>
+  <h1 class='title'>Flux Watchface<br>Configuration Page</h1>
  </div>
  
  <div class='item-container'>
@@ -19,13 +19,21 @@
   </div>
  </div>
 
- <div class='item-container'>
-  <div class='item-container-header'>Configurable items</div>
-  <div class='item-container-content'>
-   <label class='item'>
-    Time Color
-    <input id='timeColorPicker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
-   </label>
+ <div class="item-container">
+  <div class="item-container-header">Configurable items</div>
+  <div class="item-container-content">
+    <label class="item">
+     Date display
+     <label class="item">
+      <span style="vertical-align:middle">  MM/DD</span>
+      <input name="datemode" value="0" type="radio" class='item-radio' checked>
+     </label>
+     <label class="item">
+      <span style="vertical-align:middle">  DD/MM</span>
+      <input name="datemode" value="1" type="radio" class='item-radio'>
+     </label>
+    </label>
+  </div>
   <div class='item-container-footer'>
    Settings only change on the watch after you click Submit.
   </div>
