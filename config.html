@@ -2,37 +2,40 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
- <title></title>
+ <title>Flux Settings</title>
  <link rel='stylesheet' type='text/css' href='slate.min.css'>
  <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 <body>
  <div class='item-container'>
-  <h1 class='title'>Watchface<br>Configuration Page</h1>
+  <h1 class='title'>Flux Watchface<br>Configuration Page</h1>
  </div>
  
  <div class='item-container'>
   <div class='item-container-content'>
    <div class='item'>
-    Use this configuration page to choose the settings you would like applied to this app.
+    Choose the settings to apply.
    </div>
   </div>
  </div>
 
- <div class='item-container'>
-  <div class='item-container-header'>Customizability</div>
-  <div class='item-container-content'>
-   <label class='item'>
-    Background Color
-    <input id='backgroundColorPicker' type='text' class='item-color item-color-sunny' value='#000000'>
-   </label>
-   <label class='item'>
-    24-hour Format
-    <input id='timeFormatCheckbox' type='checkbox' class='item-checkbox' checked>
-   </label>
+ <div class="item-container">
+  <div class="item-container-header">Configurable items</div>
+  <div class="item-container-content">
+    <label class="item">
+     Date display
+     <label class="item">
+      <span style="vertical-align:middle">  MM/DD</span>
+      <input name="datemode" value="0" type="radio" class='item-radio' checked>
+     </label>
+     <label class="item">
+      <span style="vertical-align:middle">  DD/MM</span>
+      <input name="datemode" value="1" type="radio" class='item-radio'>
+     </label>
+    </label>
   </div>
   <div class='item-container-footer'>
-   These settings only change on the watch after you click save.
+   Settings only change on the watch after you click Submit.
   </div>
  </div>
 
@@ -42,7 +45,13 @@
   </div>
  </div>
 
- <script src='slate.min.js'></script>
+ <div class="item-container">
+  <div class="button-container">
+    <input id='cancelButton' type='button' class='item-button' value='CANCEL'>
+  </div>
+ </div>
+
+ <script src='slate_reduced.min.js'></script>
  <script src='main.js'></script>
 </body>
 </html>
