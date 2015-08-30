@@ -23,23 +23,35 @@ function buttonHandler() {
  });
 }
 
+// Radio control for inverting colors
+var $dateValue;
+$("input[name=datemode]").change(function () {
+ $datemodeValue = parseInt(this.value);
+});
+
+
 
 function loadOptions() {
- var $timeColorPicker = $('#timeColorPicker');
-
- if (localStorage.timeColor) {
-  $timeColorPicker[0].value = localStorage.timeColor;
+ if (localStorage.datemode) {
+  $datemodeValue = localStorage.datemode;
+  console.log('localStorage.digital: ' + $digitalValue);
+  // setting radio' value
+ } else {
+  $datemodeValue = 0;
+  console.log('localStorage.datemode was undefined, now set to: ' + $datemodeValue);
  }
+ $("input[name=datemode][value='" + $datemodeValue + "']").attr('checked', 'checked');
+
 } 
 
 function getAndStoreConfigData() {
- var $timeColorPicker = $('#timeColorPicker');
+ console.log('datemode value: ' + $datemodeValue);
 
  var options = {
-  timeColor: $timeColorPicker.val()
+  datemode: $datemodeValue
  };
  
- localStorage.timeColor = options.timeColor;
+ localStorage.datemode = options.datemode;
 
  console.log('Got options: ' + JSON.stringify(options));
  return options;
