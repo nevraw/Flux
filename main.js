@@ -7,7 +7,7 @@ function buttonHandler() {
  var $submitButton = $('#submitButton');
 
  $submitButton.on('click', function() {
-  console.log('Submit');
+//  console.log('Submit');
  
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
@@ -16,7 +16,7 @@ function buttonHandler() {
  var $cancelButton = $('#cancelButton');
 
  $cancelButton.on('click', function() {
-  console.log('Cancel');
+//  console.log('Cancel');
  
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to;
@@ -33,18 +33,18 @@ $("input[name=datemode]").change(function () {
 function loadOptions() {
  if (localStorage.datemode) {
   $datemodeValue = localStorage.datemode;
-  console.log('localStorage.datemode: ' + $datemodeValue);
+//  console.log('localStorage.datemode: ' + $datemodeValue);
   // setting radio' value
  } else {
   $datemodeValue = 0;
-  console.log('localStorage.datemode was undefined, now set to: ' + $datemodeValue);
+//  console.log('localStorage.datemode was undefined, now set to: ' + $datemodeValue);
  }
  $("input[name=datemode][value='" + $datemodeValue + "']").attr('checked', 'checked');
 
 } 
 
 function getAndStoreConfigData() {
- console.log('datemode value: ' + $datemodeValue);
+// console.log('datemode value: ' + $datemodeValue);
 
  var options = {
   datemode: $datemodeValue
@@ -52,7 +52,7 @@ function getAndStoreConfigData() {
  
  localStorage.datemode = options.datemode;
 
- console.log('Got options: ' + JSON.stringify(options));
+// console.log('Got options: ' + JSON.stringify(options));
  return options;
 }
 
